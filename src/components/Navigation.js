@@ -1,27 +1,17 @@
-/** @jsxImportSource @emotion/react */
-
-import { css } from '@emotion/react'
+import styled from '@emotion/styled'
 import { Link } from "react-router-dom";
+
+const NavigationItem = styled.li`
+  background-color: hotpink;
+`
 
 const Navigation = () => {
   return (
     <nav>
       <ul>
-        <li 
-          css={{
-            padding: 32,
-            backgroundColor: 'hotpink',
-            fontSize: 24,
-            borderRadius: 4
-          }}
-        >
-          <Link 
-            css={css`
-              color: red;
-            `}
-            to="/"
-          >Home</Link>
-        </li>
+        <NavigationItem>
+          <Link to="/">Home</Link>
+        </NavigationItem>
         <li>
           <Link to="/vault">The Vault</Link>
         </li>
