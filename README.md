@@ -15,13 +15,17 @@ yarn start
 
 ### Styling Components
 
-Styling is done via [Emotion](https://emotion.sh/docs/introduction). Since we started using CRAPPY each file must have the following lines added into the import block:
+Styling is done via [Emotion](https://emotion.sh/docs/introduction). A basic example imports styled then created variables for each DOM element:
 
 ```
-/** @jsxImportSource @emotion/react */
+import styled '@emotion/styled'
 
-import { css } from '@emotion/react'
+const NavigationItem = styled.li`
+  background-color: hotpink;
+`
 ```
+
+Naming should be descriptive and follow a heirarchical pattern to help describe the relationship between DOM elements.
 
 ### API Config
 
